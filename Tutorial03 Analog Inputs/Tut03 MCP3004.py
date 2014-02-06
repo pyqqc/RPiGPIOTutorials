@@ -20,7 +20,7 @@ def get_adc(channel):
     
     #Filter data bits from returned bits
     adcout = ((r[1]&3) << 8) + r[2]
-    percent = int(round(adcout/10.24))
+    percent = int(round(adcout/10.23))
     
     #Print 0-1023 and percentage
     print("ADC Output: {0:4d}     Percentage: {1:3d}%".format(adcout,percent))
